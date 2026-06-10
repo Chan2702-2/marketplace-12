@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marketplace — Product</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#FF6B00' } } } }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-surface text-slate-900 dark:text-slate-100">
+  <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur border-b border-slate-200 dark:border-slate-700">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow">M</div>
+        <span class="font-semibold text-lg">Marketplace</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-3 rounded-full border border-slate-200 bg-slate-100 px-3 py-2 dark:border-slate-700 dark:bg-slate-900">
+        <i class="fa-solid fa-magnifying-glass text-slate-500"></i>
+        <input id="searchInput" type="search" placeholder="Search products..." class="bg-transparent outline-none text-sm w-72 text-slate-900 dark:text-slate-100" />
+      </div>
+
+      <nav class="hidden md:flex items-center gap-5 text-sm font-medium">
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <a href="products.html" class="hover:text-primary">Products</a>
+        <a href="about.html" class="hover:text-primary">About</a>
+        <a href="contact.html" class="hover:text-primary">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button id="darkToggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-regular fa-moon"></i></button>
+        <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-regular fa-user"></i></button>
+        <a href="cart.html" class="relative p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <span id="cartCountBadgeDetail" class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full px-1">0</span>
+        </a>
+        <button class="md:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-surface px-4 pb-4">
+      <a href="index.html" class="block py-3 text-sm text-slate-700 dark:text-slate-200">Home</a>
+      <a href="products.html" class="block py-3 text-sm text-slate-700 dark:text-slate-200">Products</a>
+      <a href="about.html" class="block py-3 text-sm text-slate-700 dark:text-slate-200">About</a>
+      <a href="contact.html" class="block py-3 text-sm text-slate-700 dark:text-slate-200">Contact</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 fade-in">
+    <div id="productDetail" class="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-3xl shadow-xl transition-transform duration-500"></div>
+  </main>
+
+  <footer class="mt-12 bg-gray-50 border-t py-6">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-sm text-gray-600">© Marketplace</div>
+    </div>
+  </footer>
+
+  <script src="assets/scripts/products.js"></script>
+  <script src="assets/scripts/app.js"></script>
+</body>
+</html>

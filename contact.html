@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Marketplace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#FF6B00' } } } }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-surface text-slate-900 dark:text-slate-100">
+  <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur border-b border-slate-200 dark:border-slate-700">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow">M</div>
+        <span class="font-semibold text-lg">Marketplace</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-3 rounded-full border border-slate-200 bg-slate-100 px-3 py-2 dark:border-slate-700 dark:bg-slate-900">
+        <i class="fa-solid fa-magnifying-glass text-slate-500"></i>
+        <input id="searchInput" type="search" placeholder="Search products..." class="bg-transparent outline-none text-sm w-72 text-slate-900 dark:text-slate-100" />
+      </div>
+
+      <nav class="hidden md:flex items-center gap-5 text-sm font-medium">
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <a href="products.html" class="hover:text-primary">Products</a>
+        <a href="about.html" class="hover:text-primary">About</a>
+        <a href="contact.html" class="hover:text-primary">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button id="darkToggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-regular fa-moon"></i></button>
+        <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-regular fa-user"></i></button>
+        <a href="cart.html" class="relative p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full px-1">0</span>
+        </a>
+        <button class="md:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-surface px-4 pb-4">
+      <a href="index.html" class="block py-3 text-sm text-slate-700 dark:text-slate-200">Home</a>
+      <a href="products.html" class="block py-3 text-sm text-slate-700 dark:text-slate-200">Products</a>
+      <a href="about.html" class="block py-3 text-sm text-slate-700 dark:text-slate-200">About</a>
+      <a href="contact.html" class="block py-3 text-sm text-slate-700 dark:text-slate-200">Contact</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 space-y-10">
+    <section>
+      <h1 class="text-2xl font-semibold">Contact Us</h1>
+      <p class="mt-3 text-slate-600 dark:text-slate-300">Have a question? Send us a message and our team will respond as soon as possible.</p>
+    </section>
+
+    <section class="grid gap-6 lg:grid-cols-2">
+      <form id="contactForm" class="space-y-4 bg-surface p-6 rounded-3xl shadow-lg">
+        <input placeholder="Name" class="w-full border border-slate-200 rounded-3xl px-4 py-3 bg-transparent text-slate-900 dark:text-slate-100" />
+        <input placeholder="Email" class="w-full border border-slate-200 rounded-3xl px-4 py-3 bg-transparent text-slate-900 dark:text-slate-100" />
+        <textarea placeholder="Message" rows="6" class="w-full border border-slate-200 rounded-3xl px-4 py-3 bg-transparent text-slate-900 dark:text-slate-100"></textarea>
+        <button class="btn-primary rounded-3xl px-6 py-3">Send Message</button>
+      </form>
+
+      <div class="space-y-6">
+        <div class="rounded-3xl bg-surface p-6 shadow-lg">
+          <h3 class="font-semibold">Office</h3>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">123 Market Avenue, Jakarta</p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">support@marketplace.com</p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">+62 812 3456 7890</p>
+        </div>
+        <div class="rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 h-80">
+          <div class="h-full w-full bg-[url('https://source.unsplash.com/800x600/?map,city')] bg-cover bg-center"></div>
+        </div>
+        <div class="rounded-3xl bg-surface p-6 shadow-lg">
+          <h3 class="font-semibold">Follow Us</h3>
+          <div class="mt-4 flex items-center gap-4 text-primary text-xl">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
