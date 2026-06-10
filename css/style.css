@@ -1,26 +1,22 @@
 :root {
   color-scheme: light;
-  --surface: #ffffff;
-  --surface-soft: rgba(255,255,255,0.85);
-  --text: #1f2937;
-  --muted: #6b7280;
-  --border: rgba(15,23,42,.08);
-  --shadow: 0 24px 60px rgba(15,23,42,.08);
+  --surface: #f8fafc;
+  --surface-soft: rgba(248,250,252,0.95);
+  --text: #111827;
+  --muted: #475569;
+  --border: rgba(148,163,184,.35);
+  --shadow: 0 24px 60px rgba(148,163,184,.12);
 }
 
 html.dark {
   color-scheme: dark;
-  --surface: #0f172a;
-  --surface-soft: rgba(15,23,42,.9);
-  --text: #93c5fd;
+  --surface: #071321;
+  --surface-soft: rgba(15,23,42,.95);
+  --text: #f8fafc;
   --muted: #94a3b8;
-  --border: rgba(148,163,184,.16);
+  --border: rgba(148,163,184,.18);
   --shadow: 0 24px 60px rgba(0,0,0,.45);
   background: #020617;
-}
-
-html.dark .text-slate-100 {
-  color: #93c5fd !important;
 }
 
 body {
@@ -30,6 +26,26 @@ body {
 
 .bg-surface {
   background: var(--surface);
+}
+
+html.dark .bg-white {
+  background-color: #111827 !important;
+}
+
+html.dark .bg-gray-50 {
+  background-color: #111827 !important;
+}
+
+html.dark .bg-slate-200 {
+  background-color: #1f2937 !important;
+}
+
+html.dark .border-slate-200 {
+  border-color: rgba(148,163,184,.18) !important;
+}
+
+html.dark .text-slate-100 {
+  color: #c7d2fe !important;
 }
 
 .card-glass {
@@ -53,6 +69,10 @@ html.dark .card-glass {
   transform: translateY(-1px);
 }
 
+.btn-primary, .btn-primary * {
+  color: #ffffff !important;
+}
+
 .btn-outline {
   border: 1px solid rgba(148,163,184,0.4);
   color: #334155;
@@ -73,7 +93,7 @@ html.dark .card-glass {
   place-items: center;
   min-width: 240px;
   background: rgba(15,23,42,0.9);
-  color: white;
+  color: #bfdbfe;
   padding: 0.9rem 1.25rem;
   border-radius: 999px;
   box-shadow: 0 24px 60px rgba(0,0,0,0.25);

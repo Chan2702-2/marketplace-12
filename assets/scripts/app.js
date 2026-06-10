@@ -77,7 +77,7 @@
       const card = document.createElement('div');
       card.className = 'bg-surface rounded-3xl shadow-lg p-4 transition hover:-translate-y-1 hover:shadow-2xl';
       card.innerHTML = `
-        <img src="${p.image}" class="w-full h-44 object-cover rounded-3xl" />
+        <img src="${p.image}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80'" class="w-full h-44 object-cover rounded-3xl" />
         <div class="mt-4">
           <div class="text-sm text-slate-500 dark:text-slate-400">${p.category}</div>
           <h3 class="font-semibold text-lg mt-2">${p.title}</h3>
@@ -119,7 +119,7 @@
       card.className = 'bg-surface rounded-3xl shadow p-4 transition hover:-translate-y-1 hover:shadow-2xl';
       card.innerHTML = `
         <div class="relative rounded-3xl overflow-hidden">
-          <img src="${p.image}" class="w-full h-44 object-cover" />
+          <img src="${p.image}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80'" class="w-full h-44 object-cover" />
           <button data-id="${p.id}" class="favBtn absolute top-3 right-3 rounded-full p-3 bg-white/90 text-red-500 shadow ${active ? 'text-red-600' : ''}">
             <i class="${active ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
           </button>
@@ -167,7 +167,7 @@
     wrap.innerHTML = `
       <div class="space-y-6">
         <div class="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-          <div class="rounded-3xl overflow-hidden shadow-lg h-96 md:h-[28rem]"><img src="${p.image}" class="w-full h-full object-cover" /></div>
+          <div class="rounded-3xl overflow-hidden shadow-lg"><img src="${p.image}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80'" class="w-full h-full object-cover" /></div>
           <div class="space-y-4">
             <div class="rounded-3xl p-5 bg-surface shadow-lg">
               <span class="text-xs uppercase tracking-[0.2em] text-primary">${p.category}</span>
@@ -252,7 +252,7 @@
       const row = document.createElement('div');
       row.className = 'flex flex-col gap-4 bg-surface rounded-3xl p-4 shadow md:flex-row md:items-center';
       row.innerHTML = `
-        <img src="${product.image}" class="w-full h-44 rounded-3xl object-cover md:w-36 md:h-28" />
+        <img src="${product.image}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80'" class="w-full h-44 rounded-3xl object-cover md:w-36 md:h-28" />
         <div class="flex-1 space-y-2">
           <div class="font-semibold">${product.title}</div>
           <div class="text-sm text-slate-500 dark:text-slate-400">${product.category}</div>
